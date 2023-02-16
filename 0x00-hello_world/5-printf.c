@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - function that executes program logic.
+ * main - entry point
  *
  * Return: 0 on success, non-zero on error
  */
