@@ -3,11 +3,9 @@
 /**
  * main - entry point
  *
- * puts - prints a string
+ * Description - prints out a string
  *
- * str - string to be printed
- *
- * Return - end point 0(Success)
+ * @return - an integer value to indicate success or failure
  */
 int main(void)
 {
