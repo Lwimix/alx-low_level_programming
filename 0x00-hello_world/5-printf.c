@@ -3,9 +3,7 @@
 /**
  * main - function that executes program logic.
  *
- * @return - offers a return value to indicate whether
- * has run okay. 0 indicates successful
- * termination, while other values indicate errors.
+ * Return: 0 on success, non-zero on error
  */
 int main(void)
 {
