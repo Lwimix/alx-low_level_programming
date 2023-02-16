@@ -9,7 +9,7 @@
  * integer value to indicate that there was an error
  * execution.
  *
- * @return - an integer value to indicate success or failure of the programme.
+ * Return: an integer value to indicate success or failure of the programme.
  */
 int main(void) /*returns an integer*/
 {
