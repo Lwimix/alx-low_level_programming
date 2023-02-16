@@ -6,7 +6,7 @@
  * Function carries out the main logic of the program and returns
  * an integer value of 0 to indicate
  * the execution was successful and any other
- * integer value to indicate that there was an error 
+ * integer value to indicate that there was an error
  * execution.
  *
  * @return - an integer value to indicate success or failure of the programme.
