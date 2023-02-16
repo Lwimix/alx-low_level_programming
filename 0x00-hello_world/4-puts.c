@@ -11,7 +11,7 @@
  *
  * @return - an integer value to indicate success or failure of the programme.
  */
-int main(void)i /*returns an integer*/
+int main(void) /*returns an integer*/
 {
 	char str[55] = "\"Programming is like building a multilingual puzzle";
 
