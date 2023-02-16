@@ -4,11 +4,12 @@
  * main - function that executes program logic.
  *
  * @return - offers a return value to indicate whether
- * * a program has run successfully or not.
+ * has run okay. 0 indicates successful
+ * termination, while other values indicate errors.
  */
 int main(void)
 {
-	printf("with proper grammar,"
-	" but the outcome is a piece of art,\n");
+	printf("with proper grammar,\
+	       but the outcome is a piece of art,\n");
 	return (0);
 }
