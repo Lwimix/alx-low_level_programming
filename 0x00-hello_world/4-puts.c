@@ -3,7 +3,9 @@
 /**
  * main - entry point
  *
- * Description - prints a string
+ * puts - prints a string
+ *
+ * str - string to be printed
  *
  * Return - end point 0(Success)
  */
