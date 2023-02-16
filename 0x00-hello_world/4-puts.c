@@ -3,6 +3,8 @@
 /**
  * main - entry point
  *
+ * Description - prints a string
+ *
  * Return - end point 0(Success)
  */
 int main(void)
