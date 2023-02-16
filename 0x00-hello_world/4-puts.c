@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-/* main - entry point
+/**
+ * main - entry point
  *
  * return - end point 0(Success)
  */
