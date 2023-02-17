@@ -8,7 +8,8 @@
 int main (void)
 {
 	int n = 'a';
-	while ( n <= 'z' && n != '\0')
+
+	while( n <= 'z' && n != '\0')
 	{
 		putchar(n);
 		n++;
