@@ -11,7 +11,7 @@ int main(void)
 
 	while (u <= 'z' && u != '\0')
 	{
-		if(u == 'q' || u == 'e')
+		if (u == 'q' || u == 'e')
 		{
 			u++;
 		}
