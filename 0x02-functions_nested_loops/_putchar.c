@@ -8,5 +8,6 @@ int _putchar();
  */
 int _putchar()
 {
-	return(write(1, "_putchar\n", 25));
+	write(1, "_putchar\n", 9);
+	return (0);
 }
