@@ -9,7 +9,7 @@
 int main(void)
 {
 	int i;
-	char op [] = "_putchar";
+	char op[] = "_putchar";
 
 	for (i = 0; op[i] != '\0'; i++)
 	{
