@@ -11,9 +11,9 @@ int alphabet_main(void)
 	print_alphabet();
 	return (0);
 }
-/** 
+/**
  * print_alphabet - alphabet in lowercase
- * 
+ *
  * Return: 0 for SUCCESS
  */
 void print_alphabet(void)
