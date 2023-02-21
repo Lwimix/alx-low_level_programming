@@ -2,23 +2,25 @@
 #include "main.h"
 
 /**
- * main - check code
+ * alphabet_main - check code
  *
  * Return: Always 0.
  */
 int alphabet_main(void)
 {
 	print_alphabet();
-	return 0;
+	return (0);
 }
+/* print_alphabet - alphabet in lowercase */
 void print_alphabet(void)
 {
     char u = 'a';
+
     while (u <= 'z')
-    {
-        _putchar(u);
-        u++;
-    }
+	{
+        	_putchar(u);
+        	u++;
+	}
     _putchar('\n');
 }
 
