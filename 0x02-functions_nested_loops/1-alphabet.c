@@ -11,16 +11,19 @@ int alphabet_main(void)
 	print_alphabet();
 	return (0);
 }
-/* print_alphabet - alphabet in lowercase */
+/** 
+ * print_alphabet - alphabet in lowercase
+ * 
+ * Return: 0 for SUCCESS
+ */
 void print_alphabet(void)
 {
-    char u = 'a';
+	char u = 'a';
 
-    while (u <= 'z')
+	while (u <= 'z')
 	{
-        	_putchar(u);
-        	u++;
+		_putchar(u);
+		u++;
 	}
-    _putchar('\n');
+	_putchar('\n');
 }
-
