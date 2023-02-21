@@ -6,17 +6,19 @@
  *
  * Return: Always 0.
  */
-int main(void)
+int alphabet_main(void)
 {
 	print_alphabet();
 	return 0;
 }
 void print_alphabet(void)
 {
-	int u;
-
-	for(u = 'a'; u <= 'z' && u != '\0'; u++)
-	{
-		write(1, &u, 30);
-	}
+    char u = 'a';
+    while (u <= 'z')
+    {
+        _putchar(u);
+        u++;
+    }
+    _putchar('\n');
 }
+

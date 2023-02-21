@@ -1,13 +1,13 @@
 #include <unistd.h>
-int _putchar();
+char _putchar(char);
 
 /**
  * _putchar - prints '_putchar'
  *
  * Return: Always 0.
  */
-int _putchar()
+char _putchar(char u)
 {
-	write(1, "_putchar\n", 9);
+	write(1, &u, 1);
 	return (0);
 }
