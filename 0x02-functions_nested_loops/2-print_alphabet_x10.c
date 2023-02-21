@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * main - check code
+ * print_alphabet_x10 - the alphabet ten times
  *
- * Return: Always 0
+ * Return: The alphabet with newline
  */
 void print_alphabet_x10(void)
 {
