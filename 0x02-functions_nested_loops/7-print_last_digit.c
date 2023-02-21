@@ -2,14 +2,15 @@
 
 /**
  * print_last_digit - last digit
- * @u - number
+ * @u: number
  *
  * Return: last digit
  */
-int print_last_digit (int u)
+int print_last_digit(int u)
 {
 	int last;
 	last = u % 10;
+
 	if (last < 0)
 	{
 		last = last * -1;
@@ -17,5 +18,5 @@ int print_last_digit (int u)
 		return (last);
 	}
 	_putchar(u + '0');
-	return u;
+	return (u);
 }
