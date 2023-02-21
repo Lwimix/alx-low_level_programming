@@ -2,13 +2,13 @@
 
 /**
  * _isalpha - checks whether part of the alphabet
- * @c - checked whther alphabet
+ * @c: checked whether alphabet
  *
  * Return: 1 for SUCCESS
  */
 int _isalpha(int c)
 {
-	if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	if( (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') )
 	{
 		return (1);
 	}
