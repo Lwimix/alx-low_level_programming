@@ -2,7 +2,7 @@
 char _putchar(char);
 
 /**
- * _putchar - prints '_putchar'
+ * _putchar - prints a character
  *
  * Return: Always 0.
  */
