@@ -1,0 +1,24 @@
+#include "main.h"
+
+/**
+ * times_table - multiples table
+ *
+ * Return: times table
+ */
+void times_table(void)
+{
+	int num = 0;
+	int cnt;
+
+	for (cnt = 0; cnt < 10; cnt++)
+	{
+		_putchar(num + cnt + '0');
+		_putchar(',');
+		_putchar(' ');
+		_putchar(' ');
+	}
+	if (cnt == 9)
+	{
+		_putchar('$');
+	}
+}
