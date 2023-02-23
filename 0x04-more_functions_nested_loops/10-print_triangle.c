@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_square - prints a square
- * @size: size of square
+ * print_triangle - prints a triangle
+ * @size: size of triangle
  *
  * Return: 1 for SUCCESS, 0 otherwise
  */
-void print_square(int size)
+void print_triangle(int size)
 {
 	int in_count;
 
@@ -17,6 +17,7 @@ void print_square(int size)
 
 		for (count = 0; count < size; count++)
 		{
+			int space = 
 			_putchar('#');
 		}
 		_putchar('\n');
