@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_numbers - prints numbers (0-9), no 2 or 4
+ * print_most_numbers - prints numbers (0-9), no 2 or 4
  *
  * Return: 1 for SUCCESS, 0 otherwise
  */
