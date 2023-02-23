@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
  * mul - multiplies two integers
@@ -12,7 +13,10 @@ int mul(int a, int b)
 	int result;
 
 	result = a * b;
-	_putchar(result + '0');
-	_putchar('\n');
-	return (1);
+	return (result);
+}
+char _putchar(char u)
+{
+	write(1, &u, 1);
+	return (0);
 }
