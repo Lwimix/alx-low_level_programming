@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
  * print_line - prints a line
@@ -8,8 +9,18 @@
  */
 void print_line(int n)
 {
-	while (n > 0)
-	{
+	int cnt;
 
+	for (cnt = 0; cnt < n; cnt++)
+	{
+		if (n == 0 || n < 0)
+		{
+			_putchar('\n');
+		}
+		else
+		{
+			_putchar('_');
+		}
 	}
+	_putchar('\n');
 }
