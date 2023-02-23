@@ -8,7 +8,7 @@
 int main(void)
 {
 	int i;
-	
+	/* Comments are in blue */
 	printf("Infinite loop incoming :(\n");
 	/**
 	 * i = 0;
@@ -19,6 +19,6 @@ int main(void)
 	 * }
 	 */
 	printf("Infinite loop avoided! \\o/\n");
-	
+	/* They make this look colorful */
 	return (0);
 }
