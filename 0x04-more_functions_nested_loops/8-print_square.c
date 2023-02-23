@@ -21,7 +21,7 @@ void print_square(int size)
 		}
 		_putchar('\n');
 	}
-	if(in_count == '\0')
+	if (in_count == '\0')
 	{
 		_putchar('\n');
 	}
