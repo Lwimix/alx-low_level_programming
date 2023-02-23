@@ -15,6 +15,12 @@ int mul(int a, int b)
 	result = a * b;
 	return (result);
 }
+/**
+ * _putchar - prints a character
+ * @u: printed character
+ *
+ * Return: a character
+ */
 char _putchar(char u)
 {
 	write(1, &u, 1);
