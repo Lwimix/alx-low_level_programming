@@ -19,7 +19,20 @@ void print_diagonal(int n)
 		}
 		else
 		{
+			int u;
+
 			char slash = '\\';
+
+
+			for (u = 0; u < n; u++)
+			{
+				while (n > 0)
+				{
+					--n;
+					_putchar(' ');
+				}
+				/*_putchar(' ');*/
+			}		
 			_putchar(slash);
 			_putchar('\n');
 		}
