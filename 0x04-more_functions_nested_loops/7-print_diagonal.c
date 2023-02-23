@@ -9,33 +9,20 @@
  */
 void print_diagonal(int n)
 {
-	int cnt;
+	int a;
+	int g;
 
-	for (cnt = 0; cnt < n; cnt++)
+	if (n <= 0)
 	{
-		if (n == 0 || n < 0)
-		{
-			_putchar('\n');
-		}
-		else
-		{
-			int u;
-
-			char slash = '\\';
-
-
-			for (u = 0; u < n; u++)
-			{
-				while (n > 0)
-				{
-					--n;
-					_putchar(' ');
-				}
-				/*_putchar(' ');*/
-			}		
-			_putchar(slash);
-			_putchar('\n');
-		}
+		_putchar('\n');
 	}
-	_putchar('\n');
+	for (a = 0; a < n; a++)
+	{
+		for (g = 0; g < a; g++)
+		{
+			_putchar(' ');
+		}
+		_putchar('\\');
+		_putchar('\n');
+	}
 }
