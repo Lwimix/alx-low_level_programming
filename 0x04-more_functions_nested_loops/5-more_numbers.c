@@ -7,22 +7,23 @@
  */
 void more_numbers(void)
 {
-	int count;
-
-	count = 0;
-	for (count = 0; count <= 14; count++)
+	int i, j;
+	
+	for (i = 0; i < 10; i++)
 	{
-		if (count <= 9)
+		for (j = 0; j <= 14; j++)
 		{
-			_putchar(count + '0');
+			if (j > 9)  /* Print the tens digit */
+			{
+				_putchar('0' + (j / 10));
+				_putchar('0' + (j % 10));
+			}
+			else
+			{
+				_putchar(j +'0');
+			}
 		}
-		else
-		{
-			int made[] = 49 + 49;
-
-			_putchar(made + '0');
-			count++;
-		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
+
