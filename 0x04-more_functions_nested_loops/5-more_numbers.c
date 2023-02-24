@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * more_numbers - prints numbers (0-9)
+ * more_numbers - prints numbers (0-14)
  *
  * Return: 1 for SUCCESS, 0 otherwise
  */
