@@ -19,18 +19,6 @@ void rev_string(char *s)
 }*/
 
 /**
- * _putchar - prints a character
- *
- * Return: Always 0.
- */
-
-char _putchar(char u)
-{
-	write(1, &u, 1);
-	return (0);
-}
-
-/**
  * print_rev - prints a string in reverse
  * @s: pointer variable to string
  *
