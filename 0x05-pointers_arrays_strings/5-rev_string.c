@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 #include <unistd.h>
 
 /**
@@ -14,15 +15,14 @@ void rev_string(char *s)
 
 	while (s[i] != '\0')
 	{
-		_putchar(s[i]);
+		putchar(s[i]);
 		i++;
 	}
-	i--;
-	_putchar('\n');
+	putchar('\n');
 	while (i >= 0)
 	{
-		_putchar(s[i]);
+		putchar(s[i]);
 		i--;
 	}
-	_putchar('\n');
+	putchar('\n');
 }
