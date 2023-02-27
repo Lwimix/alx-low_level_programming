@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _print_rev - prints a string in reverse
+ * print_rev - prints a string in reverse
  * @s: pointer variable to string
  *
  * Return: nothing.
@@ -16,8 +16,9 @@ void print_rev(char *s)
 	}
 	while (index >= 0)
 	{
-		_putchar(s[index]);
+		/*_putchar(s[index]);*/
 		index--;
+		_putchar(s[index]);
 	}
 	_putchar('\n');
 }
