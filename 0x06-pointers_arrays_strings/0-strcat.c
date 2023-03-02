@@ -9,6 +9,16 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	dest = src;
+	char *count = dest;
+
+	while (*count != '\0')
+	{
+		count++;
+	}
+	while (*src != '\0')
+	{
+		*count++ = *src++;
+	}
+	*count = '\0';
 	return (dest);
 }
