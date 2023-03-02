@@ -1,23 +1,30 @@
 #include "main.h"
+/*#include <stdio.h>*/
 
 /**
- * _strncat - adds two strings 
+ * _strcat - put strings together
  * @dest: destination point
  * @src: source string
- * @n: number of bytes
  *
  * Return: added string
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int i;
-
-	for (i = 0; i < n; i++)
+	int i = 0;
+	char *count = dest;
+/*	printf("%d is size of dest\n", sizeof(dest));
+	printf("%d is size of src\n", sizeof(src));
+	printf("%d is size of n\n", sizeof(n));
+*/
+	while (*count != '\0')
 	{
-		if (dest[i] == '\0')
+		count++;
 	}
-	if (dest[i] == '\0')
+	while (i < n && *src != '\0')
 	{
+		*count++ = *src++;
+		n--;
 	}
+	*count = '\0';
 	return (dest);
 }
