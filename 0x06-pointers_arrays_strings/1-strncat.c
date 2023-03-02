@@ -2,20 +2,17 @@
 /*#include <stdio.h>*/
 
 /**
- * _strcat - put strings together
+ * _strncat - put strings together
  * @dest: destination point
  * @src: source string
- *
+ * @n: number of characters of src
  * Return: added string
  */
 char *_strncat(char *dest, char *src, int n)
 {
 	int i = 0;
 	char *count = dest;
-/*	printf("%d is size of dest\n", sizeof(dest));
-	printf("%d is size of src\n", sizeof(src));
-	printf("%d is size of n\n", sizeof(n));
-*/
+
 	while (*count != '\0')
 	{
 		count++;
