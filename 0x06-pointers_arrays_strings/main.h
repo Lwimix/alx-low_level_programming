@@ -15,3 +15,5 @@ char *cap_string(char *);
 char *leet(char *);
 
 char _putchar(char u);
+
+void print_number(int n);
