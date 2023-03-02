@@ -28,6 +28,7 @@ char *cap_string(char *strn)
 		else if (strn[u] == '\t')
 		{
 			strn[u] = ' ';
+			u++;
 		}
 		else
 		{
