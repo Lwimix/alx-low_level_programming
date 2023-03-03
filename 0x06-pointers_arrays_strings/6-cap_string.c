@@ -5,90 +5,33 @@
  * @strn: pointer variable
  *
  * Return: capitalized string
- *
+ */
 char *cap_string(char *strn)
 {
-	int u = 0;
-
-	while (strn[u] != '\0')
+	int i, j;
+	
+	int marks[13] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40,	41, 123, 125};
+	for (i = 0; strn[i] != '\0'; i++)
 	{
-		if (strn[u] == ',' || strn[u] == ';' || strn[u] == '.' ||
-				strn[u] == '!' || strn[u] == '\?' ||
-				strn[u] == '\"' || strn[u] == '(' ||
-				strn[u] == ')' || strn[u] == '{' ||
-				strn[u] == '}' || strn[u] == ' ' ||
-				strn[u] == '\n')
+		if (i == 0 && (strn[i] >= 97 && strn[i] <= 122))
 		{
-			u++;
-			if (strn[u] >= 97 && strn[u] <= 122)
-			{
-				strn[u] = strn[u] - 32;
-			}
-		}
-		else if (strn[u] == '\t')
-		{
-			strn[u] = ' ';
-			u++;
-			if (strn[u] >= 97 && strn[u] <= 122)
-			{
-				strn[u] = strn[u] - 32;
-			}
+			strn[i] = strn[i] - 32;
 		}
 		else
 		{
-			u++;
+			for (j = 0; j < 13; j++)
+			{
+				if (strn[i] == marks[j])
+				{
+					if (strn[i + 1] >= 97 && strn[i + 1]
+						       	<= 122)
+					{
+						strn[i + 1] = strn[i + 1]
+						       	- 32;
+					}
+				}
+			}
 		}
 	}
 	return (strn);
-}*/
-#include <stddef.h>
-
-char* cap_string(char* str)
-{
-	int i = 0;
-	int cap_next = 1;
-	while (str[i] != '\0')
-	{
-		if (cap_next && str[i] >= 'a' && str[i] <= 'z')
-		{
-			str[i] -= ('a' - 'A');
-		}
-		cap_next = 0;
-		switch (str[i])
-		{
-		case ' ':
-		
-		case '\t':
-		
-		case '\n':
-		
-		case ',':
-		
-		case ';':
-		
-		case '.':
-		
-		case '!':
-		
-		case '?':
-		
-		case '"':
-		
-		case '(':
-		
-		case ')':
-		
-		case '{':
-		
-		case '}':
-										                cap_next = 1;
-												break;
-		
-		default:
-												break;
-		}
-		i++;
-	}
-	return str;
 }
-
