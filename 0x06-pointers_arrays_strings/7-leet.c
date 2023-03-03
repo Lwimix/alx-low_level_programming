@@ -13,6 +13,7 @@ char *leet(char *str)
 
         char replace[10] = {'A', 'E', 'O', 'T', 'L', 'a', 'e', 'o', 't', 'l'};
         char replaced[5] = {'4', '3', '0', '7', '1'};
+	
         for (i = 0; str[i] != '\0'; i++)
         {
                 for (j = 0; j < 10; j++)
