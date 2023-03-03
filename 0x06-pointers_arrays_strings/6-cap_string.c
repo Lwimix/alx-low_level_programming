@@ -2,16 +2,17 @@
 
 /**
  * cap_string - capitalize letter after special character
- * @strn: pointer variable
+ * @str: pointer variable
  *
  * Return: capitalized string
  */
 #include <stddef.h>
 
-char* cap_string(char* str)
+char *cap_string(char *str)
 {
 	int i = 0;
 	int cap_next = 1;
+	
 	while (str[i] != '\0')
 	{
 		if (cap_next && str[i] >= 'a' && str[i] <= 'z')
@@ -41,5 +42,5 @@ char* cap_string(char* str)
 		}
 		i++;
 	}
-	return str;
+	return (str);
 }
