@@ -14,14 +14,23 @@ char *cap_string(char *strn)
 			41, 123, 125};
 	for (i = 0; strn[i] != '\0'; i++)
 		{
+			if (i == 0 && (strn[i] >= 97 && strn[i] <= 122))
+			{
+				strn[i] = strn[i] - 32;
+			}
+		else
+		{
 			for (j = 0; j < 13; j++)
+			{
+				if (strn[i] == marks[j])
 				{
-					if (strn[i] == marks[j])
-						{
-							strn[i + 1] = strn[i + 1]
-							 - 32;
-						}
+					if (strn[i + 1] >= 97 && strn[i + 1]
+					   <= 122)
+					{
+						strn[i + 1] = strn[i + 1] 
+						- 32;
 				}
+			}
 		}
 		return (strn);
 }
