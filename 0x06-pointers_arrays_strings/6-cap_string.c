@@ -5,7 +5,7 @@
  * @strn: pointer variable
  *
  * Return: capitalized string
- *
+ */
 char *cap_string(char *strn)
 {
 	int i, j;
