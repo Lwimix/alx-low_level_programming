@@ -16,7 +16,7 @@ char *_strpbrk(char *s, char *accept)
 	{
 		for (i = 0; s[i] != '\0'; i++)
 		{
-			if (s[i] == accept[u])
+			if (s[i] == accept[u] && s[i] != ',')
 			{
 				return (s + i);
 			}
