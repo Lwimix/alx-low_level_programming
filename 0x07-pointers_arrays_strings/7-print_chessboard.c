@@ -4,7 +4,7 @@
  * print_chessboard - print a set chessboard
  * @a: set board array
  *
- * Return: a chessboard with pieces
+ * Return: nothing
  */
 void print_chessboard(char (*a)[8])
 {

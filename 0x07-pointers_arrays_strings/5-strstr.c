@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
 
 /**
  * _strstr - find the checker byte in checked
@@ -10,13 +11,15 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, u;
+	int i, u, j, l;
 
-	for (u = 0; needle[u] != '\0'; u++)
+	j = strlen(haystack);
+	l = strlen(needle);
+	for (u = 0; u < l; u++)
 	{
-		for (i = 0; haystack[i] != '\0'; i++)
+		for (i = 0; i < j; i++)
 		{
-			if (haystack[i] == needle[u] && haystack[i] != '\0')
+			if (haystack[i] == needle[u])
 			{
 				return (haystack + i);
 			}
