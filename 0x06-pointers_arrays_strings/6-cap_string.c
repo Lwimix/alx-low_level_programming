@@ -2,36 +2,45 @@
 
 /**
  * cap_string - capitalize letter after special character
- * @strn: pointer variable
+ * @str: pointer variable
  *
  * Return: capitalized string
  */
-char *cap_string(char *strn)
+#include <stddef.h>
+
+char *cap_string(char *str)
 {
-	int i, j;
+	int i = 0;
+	int cap_next = 1;
 	
-	int marks[13] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40,	41, 123, 125};
-	for (i = 0; strn[i] != '\0'; i++)
+	while (str[i] != '\0')
 	{
-		if (i == 0 && (strn[i] >= 97 && strn[i] <= 122))
+		if (cap_next && str[i] >= 'a' && str[i] <= 'z')
 		{
-			strn[i] = strn[i] - 32;
+			str[i] -= ('a' - 'A');
 		}
-		else
+		cap_next = 0;
+		switch (str[i])
 		{
-			for (j = 0; j < 13; j++)
-			{
-				if (strn[i] == marks[j])
-				{
-					if (strn[i + 1] >= 97 && strn[i + 1]
-						       	<= 122)
-					{
-						strn[i + 1] = strn[i + 1]
-						       	- 32;
-					}
-				}
-			}
+			case ' ':
+			case '\t':
+			case '\n':
+			case ',':
+			case ';':
+			case '.':
+			case '!':
+			case '?':
+			case '"':
+			case '(':
+			case ')':
+			case '{':
+			case '}':
+		cap_next = 1;
+			break;
+			default:
+			break;
 		}
+		i++;
 	}
-	return (strn);
+	return (str);
 }
