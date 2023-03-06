@@ -8,33 +8,19 @@
  *
  * Return: string beginning from char
  */
-/*char *_strchr(char *s, char c)
-{
-	int v;
-
-	for (v = 0; s[v] != '\0'; v++)
-	{
-		if (s[v] == c)
-		{
-			return (s + v);
-		}
-	}
-	return (NULL);
-}*/
-
 char *_strchr(char *s, char c)
 {
 	while (*s != '\0')
 	{
 		if (*s == c)
 		{
-			return s;
+			return (s);
 		}
 		s++;
 	}
 	if (c == '\0')
 	{
-		return s;
+		return (s);
 	}
-	return NULL;
+	return (NULL);
 }
