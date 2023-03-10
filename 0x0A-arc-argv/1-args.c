@@ -3,12 +3,12 @@
 /**
  * main - entry point
  * @argc: number of arguments
- * @argv: the arguments themselves
+ * @argv: the actual arguments
  *
  * Return: 0 for SUCCESS
  */
-int main(int __attribute__((unused))argc, char *argv[])
+int main(int argc, char __attribute__ ((unused))*argv[])
 {
-	printf("%s\n", argv[0]);
+	printf("%d\n", argc);
 	return (0);
 }
