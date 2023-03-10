@@ -18,10 +18,11 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	for(; count < argc; count++)
+	for (; count < argc; count++)
 	{
 		char *endptr;
 		long int num = strtol(argv[count], &endptr, 10);
+
 		if (*endptr != '\0' || num > INT_MAX || num < INT_MIN)
 		{
 			printf("Error\n");
