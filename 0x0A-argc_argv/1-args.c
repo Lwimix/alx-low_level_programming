@@ -7,8 +7,11 @@
  *
  * Return: 0 for SUCCESS
  */
-int main(int argc, char __attribute__ ((unused))*argv[])
+int main(int argc, char __attribute__((unused))*argv[])
 {
-	printf("%d\n", argc);
+	if (argc)
+	{
+		printf("%d\n", argc - 1);
+	}
 	return (0);
 }
