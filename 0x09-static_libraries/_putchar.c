@@ -3,6 +3,7 @@
 
 /**
  * _putchar - prints a character
+ * @u: character to be printed
  *
  * Return: Always 0.
  */
