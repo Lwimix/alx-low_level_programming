@@ -16,5 +16,6 @@ void free_grid(int **grid, int height)
 	{
 		free(p_arr[i]);
 	}
+	free(p_arr);
 
 }
