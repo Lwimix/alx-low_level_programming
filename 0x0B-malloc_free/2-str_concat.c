@@ -13,10 +13,8 @@ char *str_concat(char *s1, char *s2)
 	char *p_str, *start, *u = s1, *v = s2;
 	int i = 0, j, k;
 
-	if (s1 == NULL || s2 == NULL)
-	{
-		return ("");
-	}
+	if (!s1) s1 = "";
+	if (!s2) s2 = "";	
 	while (*(u + i) != '\0')
 	{
 		i++;
@@ -28,7 +26,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	k = i + j;
 	p_str = (char *) malloc((sizeof(char) * k) + 1);
-	if (*s1 == '\0' || *s2 == '\0' || p_str == NULL)
+	if (p_str == NULL)
 	{
 		return (NULL);
 	}
