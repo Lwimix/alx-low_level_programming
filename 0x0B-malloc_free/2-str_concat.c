@@ -13,11 +13,11 @@ char *str_concat(char *s1, char *s2)
 	char *p_str, *start, *u = s1, *v = s2;
 	int i = 0, j, k;
 
-	if (!s1)
+	if ((!s1) || ((!s1) && (!s2)))
 	{
 		s1 = "";
 	}
-	if (!s2)
+	if ((!s2) || ((!s1) && (!s2)))
 	{
 		s2 = "";
 	}
