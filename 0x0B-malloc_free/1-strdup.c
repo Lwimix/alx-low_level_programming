@@ -11,7 +11,11 @@ char *_strdup(char *str)
 {
 	char *p_str, *u = str, *start;
 	int i = 0, j;
-
+	
+	if (*str == NULL)
+	{
+		return (NULL);
+	}
 	while (*(u + i) != '\0')
 	{
 		i++;
