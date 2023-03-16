@@ -10,7 +10,8 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *p_space;
+	char *p_space;
+	unsigned int u = 0;
 
 	if (nmemb == 0 || size == 0)
 	{
@@ -20,6 +21,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (!p_space)
 	{
 		return (NULL);
+	}
+	for (;u < nmemb * size; u++)
+	{
+		p_space[u] = 0;
 	}
 	return (p_space);
 }
