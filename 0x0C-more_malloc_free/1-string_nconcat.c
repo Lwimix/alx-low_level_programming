@@ -29,7 +29,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 	start = p_string;
-	if (((s1 != NULL) && (s2 != NULL)) || (!s1) || (!s2))
+	if (((s1 != NULL) || (s2 != NULL)))
 	{
 		while (*s1 != '\0')
 		{
