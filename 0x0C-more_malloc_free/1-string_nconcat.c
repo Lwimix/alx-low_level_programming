@@ -29,19 +29,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 	start = p_string;
-	if (((s1 != NULL) || (s2 != NULL)))
+	while (*s1 != '\0')
 	{
-		while (*s1 != '\0')
-		{
-			*p_string++ = *s1++;
-		}
-		while (*s2 != '\0' && i < n)
-		{
-			*p_string++ = *s2++;
-			i++;
-		}
-		*p_string = '\0';
-		return (start);
+		*p_string++ = *s1++;
 	}
-	return (NULL);
+	while (*s2 != '\0' && i < n)
+	{
+		*p_string++ = *s2++;
+		i++;
+	}
+	*p_string = '\0';
+	return (start);
 }
