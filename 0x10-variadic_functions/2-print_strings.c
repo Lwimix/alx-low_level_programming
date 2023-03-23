@@ -13,17 +13,23 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list call;
 	unsigned int i;
+	char *u, *end;
 
 	va_start(call, n);
 	for (i = 0; i < n - 1; i++)
 	{
-		/**
-		 *  if (va_arg (call, char *) == NULL)
-		 *  printf("(nil)");
-		 */
-		if (separator == NULL)
-			printf("%s ", va_arg(call, char *));
-		printf("%s%c ", va_arg(call, char *), *separator);
+		u = va_arg(call, char *);
+		if (u == NULL)
+			printf("(nil) ");
+		else if (!separator)
+			printf("%s ",u);
+		else
+		{
+			printf("%s%s", u, separator);
+		}
 	}
-	printf("%s\n", va_arg(call, char *));
+	end = va_arg(call, char *);
+	if (end == NULL)
+		printf("(nil)");
+	printf("%s\n", end);
 }
