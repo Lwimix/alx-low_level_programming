@@ -20,10 +20,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n - 1; i++)
 	{
 		if (separator == NULL)
-			printf("%d ", va_arg(call, unsigned int));
-		printf("%d%c ", va_arg(call, unsigned int), *separator);
+			printf("%d ", va_arg(call, int));
+		printf("%d%c", va_arg(call, int), *separator);
 	}
-	printf("%d\n", va_arg(call, unsigned int));
+	printf("%d\n", va_arg(call, int));
 	va_end(call);
 
 }
