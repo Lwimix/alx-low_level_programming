@@ -36,8 +36,9 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				s = va_arg(args, char*);
-				printf("%s", s ? s : "(nil)");
-				break;
+				if (s == NULL)
+					s = "(nil)";
+				printf("%s", s);
 		}
 		count++;
 		if (format[count])
