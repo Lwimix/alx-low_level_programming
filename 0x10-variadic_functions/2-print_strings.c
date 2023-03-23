@@ -9,25 +9,30 @@
  *
  * Return: nothing
  */
+
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	va_list call;
+	va_list args;
 	unsigned int i;
-	char *u, *v;
-
-	va_start(call, n);
-	for (i = 0; i < n - 1; i++)
+	const char *str;
+	
+	va_start(args, n);
+	for (i = 0; i < n; i++)
 	{
-		u = va_arg(call, char *);
-		if (u == NULL)
-			printf("(nil) ");
-		printf("%s,", u);
-		if (separator == NULL)
+		str = va_arg(args, const char *);
+		if (str == NULL)
+		{
+			printf("(nil)");
+		}
+		else
+		{
+			printf("%s", str);
+		}
+		if (i < n - 1 && separator != NULL)
+		{
 			printf("%s", separator);
+		}
 	}
-	v = va_arg(call, char *);
-	if (v == NULL)
-		printf("(nil) ");
-	printf("%s\n", v);
-	va_end(call);
+	va_end(args);
+	printf("\n");
 }
