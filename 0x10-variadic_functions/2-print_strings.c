@@ -21,12 +21,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		u = va_arg(call, char *);
 		if (u == NULL)
 			printf("(nil) ");
-		else if (!separator)
-			printf("%s ", u);
-		else
-		{
-			printf("%s%s", u, separator);
-		}
+		printf("%s,", u);
+		if (separator != NULL && i < n - 2)
+			printf("%s", separator);
 	}
 	end = va_arg(call, char *);
 	if (end == NULL)
