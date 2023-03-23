@@ -10,19 +10,39 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i, j;
-	va_list call;
+	va_list args;
+	int i = 0;
+	float f = 0.0f;
+	char c = '\0';
+	char *s = NULL;
+	int count = 0;
 
-	typedef struct cont {
-		char sign;
-		char * print;
-	}sig;
-	va_start (call, format);
-
-	sig store [] = {
-		{'c', printf("%c, ", va_arg (call, char))},
-		{'c', printf("%c, ", va_arg (call, char))},
-		{'c', printf("%c, ", va_arg (call, char))},
-		{'c', printf("%c, ", va_arg (call, char))}
+	va_start(args, format);
+	while (format && format[count])
+	{
+		switch (format[count])
+		{
+			case 'c':
+				c = va_arg(args, int);
+				printf("%c", c);
+				break;
+			case 'i':
+				i = va_arg(args, int);
+				printf("%d", i);
+				break;
+			case 'f':
+				f = (float)va_arg(args, double);
+				printf("%f", f);
+				break;
+			case 's':
+				s = va_arg(args, char*);
+				printf("%s", s ? s : "(nil)");
+				break;
+		}
+		count++;
+		if (format[count])
+			printf(", ");
 	}
+	printf("\n");
+	va_end(args);
 }
