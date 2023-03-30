@@ -11,7 +11,7 @@ unsigned int print_list(const list_t *h)
 {
 	list_t *current = (list_t *)h;
 	size_t i = 0;
-	
+
 	if (!current->str)
 	{
 		current->str = "(nil)";
