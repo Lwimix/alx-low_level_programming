@@ -12,7 +12,7 @@ size_t print_list(const list_t *h)
 	list_t *current = (list_t *)h;
 	size_t i = 0;
 
-	if (!current->str)
+	if (!current->str || !current)
 	{
 		current->str = "(nil)";
 		current->len = 0;
