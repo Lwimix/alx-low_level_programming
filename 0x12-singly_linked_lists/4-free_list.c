@@ -3,20 +3,19 @@
 
 /**
  * free_list - frees a list
- * @head: beginning of list
+ * @head: pointer to head of list
  *
  * Return: nothing
  */
 void free_list(list_t *head)
 {
-	list_t *freen, *next;
-
-	freen = head;
-	while (freen != NULL)
+	list_t *current = head, *next;
+	
+	while (current != NULL)
 	{
-		next = freen->next;
-		free(freen->str);
-		free(freen);
-		freen = next;
+		next = current->next;
+		free(current->str);
+		free(current);
+		current = next;
 	}
 }

@@ -17,7 +17,7 @@ size_t print_list(const list_t *h)
 		current->str = "(nil)";
 		current->len = 0;
 	}
-	if (current != NULL && current->str != NULL)
+	if (current != NULL)
 	{
 		while (current != NULL)
 		{
