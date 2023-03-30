@@ -7,7 +7,7 @@
  *
  * Return: number of elements
  */
-unsigned int print_list(const list_t *h)
+size_t print_list(const list_t *h)
 {
 	list_t *current = (list_t *)h;
 	size_t i = 0;
