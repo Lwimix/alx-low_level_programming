@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * clear_bit - clears bit at index to 1
+ * clear_bit - clears bit at index to 0
  * @n: address of number
  * @index: index of bit in number
  *
@@ -11,14 +11,15 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int i = (unsigned long int) index;
-printf("%lu before\n", *n);
+	unsigned long int i = (unsigned long int) index, u;
+
+	if (*n == 0)
+		return (0);
 	if (index >= sizeof(unsigned long int) * 8)
 		return (-1);
-	if ((*n & ~(1 << i)) == 0)
+	u = *n ^= (1 << i);
+	if (u == 0)
 	{
-		*n &= ~(1 << i);
-		printf("%lu after\n", *n);
 		return (1);
 	}
 	return (-1);
