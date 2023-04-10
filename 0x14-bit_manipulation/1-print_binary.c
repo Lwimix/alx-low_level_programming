@@ -11,7 +11,9 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int num = 8, test = 0, test_0 = 0;
-
+	
+	if (n < 0)
+		return;
 	while (num <= n)
 		num *= 16;
 	while (num != 0)
