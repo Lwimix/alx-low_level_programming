@@ -14,10 +14,12 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned long int num = 8, orred, bigger;
 	int count = 0;
 
-	if (n >= m)
+	if (n > m)
 		bigger = n;
-	else
+	else if (n < m)
 		bigger = m;
+	else
+		return (0);
 	while (num < bigger)
 		num *= 16;
 	orred = n ^ m;
