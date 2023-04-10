@@ -10,24 +10,27 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int num = 8;
+	unsigned long int num = 8, test = 0, test_0 = 0;
 
-	while (num < n)
+	while (num <= n)
 		num *= 16;
-	if (num >= n)
+	while (num != 0)
 	{
-		while (num)
+		if (num & n)
 		{
-			if (num & n)
-			{
-				_putchar('1');
-				num >>= 1;
-			}
-			if (!(num & n))
+			_putchar('1');
+			test = 1;
+		}
+		else
+		{
+			if (test == 1)
 			{
 				_putchar('0');
-				num >>= 1;
+				test_0 = 1;
 			}
 		}
+		num >>= 1;
 	}
+	if (num == 0 && test_0 == 0 && test == 0)
+		_putchar('0');
 }

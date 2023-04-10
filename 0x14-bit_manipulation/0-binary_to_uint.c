@@ -13,6 +13,8 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int num = atoi(b), sum = 0, i, n, j, mult;
 
+	if (b == NULL)
+		return (0);
 	for (i = 0; i < strlen(b); i++, num /= 10)
 	{
 		n = num % 10;/*Obtain last digit*/
@@ -29,8 +31,10 @@ unsigned int binary_to_uint(const char *b)
 				sum += mult;
 			}
 		}
-		if (n == 0)
+		else if (n == 0)
 			continue;
+		else
+			return (0);
 	}
 	return (sum);
 }
