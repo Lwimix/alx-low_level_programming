@@ -3,6 +3,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <string.h>
+#include <errno.h>
 #include "main.h"
 
 /**
@@ -22,7 +23,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	fd = open(filename, O_RDONLY);
 	if (fd < 0)
-		return (0);
+	{
+		if (errno == ENOENT)
+			return (0);
+	}
 	buf = malloc(sizeof(char *) * (letters + 1));
 	if (buf == NULL)
 	{
