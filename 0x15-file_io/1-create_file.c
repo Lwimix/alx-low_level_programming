@@ -15,43 +15,24 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd, num_char;
-	size_t len;
-	char *str;
+	int fd, num_char, perm, leng;
 
-	len = strlen("chmod 600 ");
-	str = (char *)malloc((strlen(filename) + len + 1));
-	if (str == NULL)
-		return (0);
-	strcpy(str, "chmod 600 ");
-	strcat(str, filename);
-	printf("%s\n", str);
+	perm = S_IRUSR | S_IWUSR;
 	if (filename == NULL)
 		return (-1);
-	if (text_content == NULL)
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, perm);
+	if (fd == -1)
+		return (-1);
+	if (text_content != NULL)
 	{
-		fd = open(filename, O_CREAT);
-		if (fd != -1)
+		leng = strlen(text_content);
+		num_char = write(fd, text_content, leng);
+		if (num_char != leng)
 		{
 			close(fd);
-			system(str);
+			return (-1);
 		}
-		else
-			return (-1);
 	}
-	free(str);
-	fd = open(filename, O_TRUNC);
-	if (fd == -1)
-	{
-		if (errno == ENOENT)
-			fd = open(filename, O_CREAT | O_RDWR);
-		if (fd == -1)
-			return (-1);
-	}
-	num_char = write(fd, text_content, strlen(text_content));
-	if (num_char == 0)
-		return (-1);
-	else
-		return (1);
-
+	close(fd);
+	return (1);
 }
