@@ -19,6 +19,7 @@ void print_binary(unsigned long int n)
 		{
 			_putchar('1');
 		}
+		_putchar('\n');
 	}
 	while (num <= n)
 		num *= 16;
