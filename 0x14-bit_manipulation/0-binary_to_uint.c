@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <math.h>
 #include "main.h"
 
 /**
@@ -34,7 +33,26 @@ unsigned int binary_to_uint(const char *b)
 	}
 	for (i = 0; i < str_len; i++)
 	{
-		sum += pow(2, i) * num[i];
+		sum += pow2(i) * num[i];
 	}
 	return (sum);
+}
+/**
+ * pow2 - powers of two
+ * @c: power
+ *
+ * Return: two to power c
+ */
+unsigned int pow2(int c)
+{
+	int i;
+	unsigned int res = 1;
+
+	if (c == 0)
+		return (1);
+	for (i = 1; i <= c; i++)
+	{
+		res *= 2;
+	}
+	return (res);
 }
