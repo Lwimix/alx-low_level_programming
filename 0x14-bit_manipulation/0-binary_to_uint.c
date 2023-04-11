@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 #include "main.h"
 
 /**
@@ -11,34 +12,29 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int num = atoi(b), sum = 0, i, n, j, mult, str_len;
+	unsigned int *num, sum = 0, i, str_len;
 
+	if (b == 0)
+		return (0);
 	str_len = strlen(b);
-	if (b == NULL)
+	num = (unsigned int *)malloc(str_len * sizeof(unsigned int));
+	if (num == NULL)
 		return (0);
 	for (i = 0; i < str_len; i++)
 	{
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
 	}
-	for (i = 0; i < str_len; i++, num /= 10)
+	for (i = 0; i < str_len; i++)
 	{
-		n = num % 10;/*Obtain last digit*/
-		if (n == 1)
-		{
-			if (i == 0)
-			{
-				sum = 1;
-			}
-			if (i != 0)
-			{
-				for (j = 1, mult = 1; j <= i; j++)
-					mult *= 2;
-				sum += mult;
-			}
-		}
-		else if (n == 0)
-			continue;
+		if (b[i] == '0')
+			num[i] = 0;
+		else
+			num[i] = 1;
+	}
+	for (i = 0; i < str_len; i++)
+	{
+		sum += pow(2, i) * num[i];
 	}
 	return (sum);
 }
