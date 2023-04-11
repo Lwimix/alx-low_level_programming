@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 #include "main.h"
 
 /**
@@ -10,8 +11,15 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int num = 8, test = 0, test_0 = 0;
+	unsigned long int num = 8, test = 0, test_0 = 0, i;
 
+	if (n == ULONG_MAX)
+	{
+		for (i = 0; i < 64; i++)
+		{
+			_putchar('1');
+		}
+	}
 	while (num <= n)
 		num *= 16;
 	while (num != 0)
