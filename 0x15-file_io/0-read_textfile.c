@@ -33,7 +33,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	l_read = read(fd, buf, letters);
 	close(fd);
 	if (l_read == 0)
+	{
+		buf[0] = '\0';
 		return (0);
+	}
+	buf[l_read] = '\0';
 	ret = write(1, buf, strlen(buf));
 	if (ret == -1 || ret != (int)strlen(buf))
 		return (0);
