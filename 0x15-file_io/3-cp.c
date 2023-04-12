@@ -28,18 +28,20 @@ int main(int argc, char **argv)
 		dprintf(2, "Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	num_read = read(fd, buf, buf_size);/*Copy contents to buffer*/
-	if (num_read == -1)
-	{
-		dprintf(2, "Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
 	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (fd2 == -1)
 		err_print(argv);
-	num_char = write(fd2, buf, num_read);/*Write to new file*/
-	if (num_char == -1)
-		err_print(argv);
+	while ((num_read = read(fd, buf, buf_size)) > 0)
+	{
+		if (num_read == -1)
+		{
+			dprintf(2, "Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
+		num_char = write(fd2, buf, num_read);/*Write to new file*/
+		if (num_char == -1)
+			err_print(argv);
+	}
 	close_err = close(fd);
 	close_err2 = close(fd2);
 	closer = (close_err == -1) ? fd : fd2;
