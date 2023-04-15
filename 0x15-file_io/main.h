@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #ifndef MAIN_H
 #define MAIN_H
 
@@ -9,9 +11,9 @@
  *
  * Return: nothing
  */
-void err_99_print(char **file)
+void err_99_print(char *file)
 {
-	dprintf(2, "Error: Can't write to %s\n", file[2]);
+	dprintf(2, "Error: Can't write to %s\n", file);
 	exit(99);
 }
 /**
@@ -20,9 +22,9 @@ void err_99_print(char **file)
  *
  * Return: nothing
  */
-void err_98_print(char **file)
+void err_98_print(char *file)
 {
-		dprintf(2, "Can't read from file %s\n", file[1]);
+		dprintf(2, "Can't read from file %s\n", file);
 		exit(98);
 }
 /**
