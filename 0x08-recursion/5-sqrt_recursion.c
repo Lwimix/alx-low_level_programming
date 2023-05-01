@@ -1,4 +1,5 @@
 #include "main.h"
+int _sqrt_recursive(int n, int i);
 
 /**
  * _sqrt_recursion - square root of a number
@@ -8,53 +9,30 @@
  */
 int _sqrt_recursion(int n)
 {
-	 /**
-	  *  * _sqrt_recursive - helper function that recursively calculates the square root
-	  *   * @n: number to calculate square root of
-	  *    * @i: current integer to check
-	  *     *
-	  *      * Return: square root of n, or -1 if n does not have a natural square root
-	  *       */
-	int _sqrt_recursive(int n, int i)
+	int i = 1;
+	
+	if (n < 0)
+		return (-1);
+	else if (n == 0 || n == 1)
+		return (n);
+	else
+	if (i * i == n)
 	{
-		if (i * i == n)
-		{
-			return i;
-		}
-		
-		else if (i * i > n)
-		{
-			return -1;
-		}
-		else 
-		{
-			return _sqrt_recursive(n, i + 1);
-		}
+		return i;
 	}
-
-	/*
-	 * _sqrt_recursion - returns the natural square root of a number
-	 * @n: number to calculate square root of
-	 *
-	 *
-	 * Return: square root of n, or -1 if n
-	 * does not have a natural square root
-	 */
-	int _sqrt_recursion(int n)
+	else if (i * i > n)
 	{
-		if (n <0)
-		{
-			return -1;
-		}
-		
-		else if (n == 0 || n == 1)
-		{
-			return n;
-		}
-		else
+		return -1;
+	}
+	else
+	{
+		i++;
+
+		return _sqrt_recursion(n);
+	}
+			else
 		{
 			return _sqrt_recursive(n, 1);
 		}
-	}
 
 }
