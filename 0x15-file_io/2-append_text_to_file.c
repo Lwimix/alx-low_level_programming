@@ -14,7 +14,7 @@
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd, num_char, leng, perm, one_char;
+	int fd, num_char, leng, perm;
 
 	perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 	if (filename == NULL)
@@ -27,12 +27,6 @@ int append_text_to_file(const char *filename, char *text_content)
 		leng = strlen(text_content);
 		num_char = write(fd, text_content, leng);
 		if (num_char != leng)
-		{
-			close(fd);
-			return (-1);
-		}
-		one_char = write(fd, "\n", 1);
-		if (one_char == -1)
 		{
 			close(fd);
 			return (-1);
