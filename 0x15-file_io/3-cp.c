@@ -76,6 +76,7 @@ void err_99_print(char *file)
  */
 void err_100_print(int closer)
 {
-	dprintf(2, "Error can't close fd %d", closer);
+	(void)closer;
+	dprintf(2, "Error can't close fd\n");
 	exit(100);
 }
