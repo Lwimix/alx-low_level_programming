@@ -42,7 +42,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buf[l_read] = '\0';
 	if ((size_t)l_read > letters)
 		ret = write(2, buf, strlen(buf));
-	else
+	else if ((size_t)l_read <= letters)
 		ret = write(1, buf, strlen(buf));
 	if (ret == -1 || ret != (int)strlen(buf))
 		return (0);
