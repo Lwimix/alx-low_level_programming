@@ -3,7 +3,7 @@
 /**
  * get_dnodeint_at_index - gets value at index
  * @head: head of list
- * @index: index value 
+ * @index: index value
  *
  * Return: nth node
  */
