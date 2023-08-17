@@ -9,7 +9,7 @@
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	unsigned int count = 0;
+	unsigned int count = 0;jd
 	dlistint_t *cpy_ptr = head;
 
 	if (head == NULL)
