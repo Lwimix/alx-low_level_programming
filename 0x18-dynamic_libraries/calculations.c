@@ -1,9 +1,5 @@
 #include "main.h"
 
-extern int add(int a, int b);
-extern int sub(int a, int b);
-extern int mul(int a, int b);
-extern int mod(int a, int b);
 /**
  * add - adds two numbers
  * @a: first number
@@ -50,4 +46,16 @@ int mul(int a, int b)
 int mod(int a, int b)
 {
 	return (a % b);
+}
+
+/**
+ * div - divides two numbers
+ * @a: first
+ * @b: second
+ *
+ * Return: division of two
+ */
+int div(int a, int b)
+{
+	return (a / b);
 }
