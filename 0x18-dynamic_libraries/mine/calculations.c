@@ -51,15 +51,3 @@ int mod(int a, int b)
 {
 	return (a % b);
 }
-
-/**
- * div - divides two numbers
- * @a: first
- * @b: second
- *
- * Return: division of the two
- */
-extern int div(int a, int b)
-{
-	return (a / b);
-}
