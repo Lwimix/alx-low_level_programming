@@ -1,5 +1,10 @@
 #include "main.h"
+#include <stdlib.h>
 
+extern int add(int a, int b);
+extern int sub(int a, int b);
+extern int mul(int a, int b);
+extern int mod(int a, int b);
 /**
  * add - adds two numbers
  * @a: first number
@@ -34,18 +39,6 @@ int sub(int a, int b)
 int mul(int a, int b)
 {
 	return (a * b);
-}
-
-/**
- * div - divides two numbers
- * @a: first number
- * @b: second number
- *
- * Return: division of two numbers
- */
-int div(int a, int b)
-{
-	return (a / b);
 }
 
 /**
