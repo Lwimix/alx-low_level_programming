@@ -11,7 +11,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	unsigned long int i;
 	hash_table_t *ptr = NULL;
 
-	if (size <= 0)/*add more conditions like MAX*/
+	if (size <= 0 || size >= ULONG_MAX)
 		return (NULL);
 	ptr = (hash_table_t *) malloc(sizeof(hash_table_t));
 	if (ptr == NULL)

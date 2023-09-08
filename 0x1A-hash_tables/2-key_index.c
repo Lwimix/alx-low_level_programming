@@ -10,9 +10,13 @@
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
 	unsigned long int index = -1, hashed_value = 0;
-	/*Check if key is a string on this line*/
-	if (size <= 0) /*Implement MAXSIZE and checking if size is int*/
-		return (EXIT_FAILURE);
+	size_t length = 0;
+
+	if (key == NULL || strlen((const char *)key) == 0)
+		exit(EXIT_FAILURE);
+	length = strlen((const char *)key);
+	if (size <= 0 || size >= ULONG_MAX || length >= CHAR_MAX)
+		exit(EXIT_FAILURE);
 	hashed_value = hash_djb2(key);
 	index = hashed_value % size;
 	return (index);

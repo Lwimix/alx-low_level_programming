@@ -14,7 +14,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *node = NULL, *ptr = NULL;
 	char *my_value = NULL;
 
-	if (ht == NULL || strlen(key) == 0)
+	if (key == NULL || value == NULL)
+		return (0);
+	if (ht == NULL || strlen(key) == 0 || strlen(key) >= CHAR_MAX)
+		return (0);
+	if (strlen(value) >= CHAR_MAX)
 		return (0);
 	index = key_index((const unsigned char *)key, ht->size);
 	if (index == ht->size)/*Not accessible index*/
