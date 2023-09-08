@@ -31,7 +31,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 /**
  * free_node - frees a hash table node
  * @node: hash table node
- * @size: number of elements in hash table
  *
  * Return: nothing
  */

@@ -29,6 +29,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		node->next = ptr;
 		ht->array[index] = node;
 	}
+	free(my_value);
 	return (1);
 }
 
