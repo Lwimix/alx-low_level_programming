@@ -2,7 +2,7 @@
 # files (*.o), then into an executable, school
 
 CC=gcc
-SRC:=$(wildcard *.c)
+SRC=$(wildcard *.c)
 OBJ=$(SRC:.c=.o)
 NAME=school
 
