@@ -3,7 +3,7 @@
 
 CC=gcc
 SRC:=$(wildcard *.c)
-OBJ:=$(patsubst %.c, %.o, $(SRC))
+OBJ:=$(SRC:.c=.o)
 NAME=school
 
 .PHONY: $(NAME)
