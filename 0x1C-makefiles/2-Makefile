@@ -2,15 +2,9 @@
 # (.o) then to the executable school
 
 CC=gcc
-SRC:=$(wildcard *.c)
+SRC:=main.c school.c
 OBJ:=$(SRC:.c=.o)
 NAME=school
 
-.PHONY: $(NAME)
-all: $(NAME)
-
-$(NAME): $(OBJ)
+all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-
-$(OBJ): $(SRC)
-	$(CC) -c $< -o $@
