@@ -21,4 +21,3 @@ fclean:
 re:
 	$(RM) $(OBJ)
 	@$(RM) $(NAME)
-	$(all)
