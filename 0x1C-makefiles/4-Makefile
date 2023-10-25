@@ -2,7 +2,7 @@
 # files (*.o), then into an executable, school
 
 CC=gcc
-SRC=$(wildcard *.c)
+SRC=main.c school.c
 OBJ=$(SRC:.c=.o)
 CFLAGS=-Wall -Werror -Wextra -pedantic
 NAME=school
