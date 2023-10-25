@@ -2,27 +2,23 @@
 # files (*.o), then into an executable, school
 
 CC=gcc
-SRC:=$(wildcard *.c)
+SRC=$(wildcard *.c)
 OBJ=$(SRC:.c=.o)
 CFLAGS=-Wall -Werror -Wextra -pedantic
 NAME=school
+RM=rm -f
 
-.PHONY: $(NAME)
-all: $(NAME)
-
-$(NAME): $(OBJ)
+all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f *~ $(NAME)
+	$(RM) *~ $(NAME)
 oclean:
-	rm -f $(OBJ)
+	$(RM) $(OBJ)
 fclean:
-	rm -f *~ $(NAME)
-	rm -f $(OBJ)
+	$(RM) *~ $(NAME)
+	$(RM) $(OBJ)
 re:
-	rm -f $(OBJ)
-	@rm -f $(NAME)
+	$(RM) $(OBJ)
+	@$(RM) $(NAME)
 	$(all)
