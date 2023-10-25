@@ -1,0 +1,28 @@
+# This makefile compiles all C(*.c) files into object
+# files (*.o), then into an executable, school
+
+CC=gcc
+SRC:=$(wildcard *.c)
+OBJ=$(patsubst %.c, %.o, $(SRC))
+CFLAGS=-Wall -Werror -Wextra -pedantic
+NAME=school
+
+.PHONY: $(NAME)
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+%.o: %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+clean:
+	rm -f *~ $(NAME)
+oclean:
+	rm -f $(OBJ)
+fclean:
+	rm -f *~ $(NAME)
+	rm -f $(OBJ)
+re:
+	rm -f $(OBJ)
+	@rm -f $(NAME)
+	$(all)

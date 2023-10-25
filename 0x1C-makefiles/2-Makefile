@@ -1,0 +1,16 @@
+# This makefile compiles all .c files to object files
+# (.o) then to the executable school
+
+CC=gcc
+SRC:=$(wildcard *.c)
+OBJ:=$(patsubst %.c, %.o, $(SRC))
+NAME=school
+
+.PHONY: $(NAME)
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+$(OBJ): $(SRC)
+	$(CC) -c -o $@ $<
