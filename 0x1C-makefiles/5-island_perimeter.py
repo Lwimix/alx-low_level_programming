@@ -17,6 +17,8 @@ def island_perimeter(grid):
             for item in small_grid:
                 if item == 1:
                     size = size + 1
+                elif item != 0 and item != 1:
+                    return 0
         if size != 0:
             perim = (size + 1) * 2
     return perim
