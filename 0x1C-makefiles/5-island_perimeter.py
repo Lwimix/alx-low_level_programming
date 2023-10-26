@@ -4,6 +4,8 @@ This is island_perimeter
 It is a part of technical interview
 preparation
 """
+
+
 def island_perimeter(grid):
     """
     The island_perimeter function
@@ -11,14 +13,18 @@ def island_perimeter(grid):
     island in a grid
     """
     perim = 0
-    if grid != None:
+    if type(grid) != list:
+        return
+    if grid is not None:
         size = 0
         for small_grid in grid:
             for item in small_grid:
-                if item == 1:
+                if type(item) != int:
+                    return
+                elif item == 1:
                     size = size + 1
                 elif item != 0 and item != 1:
-                    return 0
+                    return
         if size != 0:
             perim = (size + 1) * 2
     return perim
